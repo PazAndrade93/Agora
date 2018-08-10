@@ -1,0 +1,31 @@
+/*
+#273043
+#9197AE
+#EFF6EE
+#F02D3A
+#DD0426
+*/
+body{
+	background-color: #F02D3A;
+}
+.container{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.titulo{
+	text-align: center;
+	color: #273043;
+}
+a{
+	color: #EFF6EE;
+}
+.btn-primary{
+	margin-bottom: 10px;
+	background-color: inherit;
+	border-color: black;
+	color: black;
+}
