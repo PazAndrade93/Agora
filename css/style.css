@@ -1,31 +1,32 @@
-/*
-#273043
-#9197AE
-#EFF6EE
-#F02D3A
-#DD0426
-*/
+
+*{
+	box-sizing: border-box;
+}
 body{
-	background-color: #F02D3A;
+	background-color: #FFC300;
 }
 .container{
-	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 .titulo{
 	text-align: center;
-	color: #273043;
+	color: #581845;
+}
+label{
+	color: #581845;
 }
 a{
-	color: #EFF6EE;
+	color: #FF5733;
 }
 .btn-primary{
 	margin-bottom: 10px;
 	background-color: inherit;
-	border-color: black;
-	color: black;
+	border-color: #581845;
+	color: #581845;
 }
