@@ -8,8 +8,13 @@
 	<title>Login - Agora</title>
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid contenedorPantallaCompleta">
 		<div class="linearLayoutV loginForm col-12 col-lg-7">
+			<div style="position: fixed; top: 0;">
+				<a class="navbar-brand" href="index.php">
+	              <img src= "img/agora.png"  class="logo" alt="Brand">
+	            </a>
+			</div>
 			<form method="POST">
 				<h2 class="titulo">Login</h2><br>
 			  <div class="row">

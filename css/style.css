@@ -5,6 +5,42 @@
 body{
 	background-color: #FFC300;
 }
+h1{
+	font-size: 7vw;
+	color: #581845;
+	margin: 0px;
+}
+h2{
+	color: #581845;
+	font-style: bold;
+}
+h3{
+	color: #581845;
+
+}
+p{
+	color: #581845;
+	text-align: justify;
+}
+label{
+	color: #581845;
+}
+a{
+	color: #FF5733;
+}
+.nav{
+	display:inline;
+	display: flex;
+}
+.portada{
+	display: none;
+}
+.logo{
+	width: 13vw;
+}
+.nav-link{
+	color: #581845;
+}
 .container-fluid{
 	display: flex;
 	flex-direction: row;
@@ -15,6 +51,12 @@ body{
 	padding-bottom: 50px;
 	height: 100vh;
 }
+.faq{
+	background-color: white;
+	margin: 10px auto;
+	padding: 15px;
+	width: 80%;
+}
 div.linearLayoutV{
 	display: flex;
 	flex-direction: column;
@@ -23,12 +65,7 @@ div.linearLayoutV{
 	text-align: center;
 	color: #581845;
 }
-label{
-	color: #581845;
-}
-a{
-	color: #FF5733;
-}
+
 .loginImg,
 .registerImg{
 	display: none;
@@ -41,8 +78,18 @@ a{
 }
 
 @media(min-width: 992px){
+	header{
+		margin-left: 2%;
+		margin-right: 2%;
+	}
 	.container-fluid{
 		padding: 0;
+	}
+	.contenedorPantallaCompleta{
+		height: 100vh;
+	}
+	.portada{
+		width: 50vw;
 	}
 	.loginForm{
 		text-align: left;
@@ -55,10 +102,11 @@ a{
 		display: block;
 		text-align: right;
 		justify-content: flex-end;
-		height: 100vh;
 		padding-right: 0;
+		height: 100%;
 	}
-	.loginImg img{
+	.loginImg img,
+	.registerImg img{
 		width: 40vw;
 		height: 100%;
 	}
@@ -75,10 +123,7 @@ a{
 		justify-content: flex-start;
 		height: 100vh;
 		padding-left: 0;
-	}
-	.registerImg img{
-		width: 40vw;
-		height: 100%;
+		overflow: hidden;
 	}
 }
 

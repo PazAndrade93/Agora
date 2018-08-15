@@ -8,7 +8,12 @@
 	<title>Registro - Agora</title>
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid contenedorPantallaCompleta">
+		<div style="position: fixed; top: 0;">
+			<a class="navbar-brand" href="index.php">
+              <img src= "img/agora.png"  class="logo" alt="Brand">
+            </a>
+		</div>
 		<div class="registerImg col-lg-5">
 			<img src="img/registerMinimalistPic.png">
 		</div>
@@ -22,31 +27,31 @@
 				<div class="row">
 					<div class="col-12 col-sm-6">
 					    <label for="inputNombre">Nombre</label>
-				    	<input type="text" class="form-control" id="inputNombre"placeholder="Nombre" name="name">
+				    	<input type="text" class="form-control" id="inputNombre" placeholder="Nombre" name="name">
 				  	</div>
 				  	<div class="col-12 col-sm-6">
 					    <label for="inputLastname">Apellido</label>
-				    	<input type="text" class="form-control" id="inputLastname"placeholder="Apellido" name="lastname">
+				    	<input type="text" class="form-control" id="inputLastname" placeholder="Apellido" name="lastname">
 				  	</div>
 				</div>
 				<div class="row">
 					<div class="col-12 col-sm-6">
 					    <label for="inputEmail1">Email</label>
-				    	<input type="email" class="form-control" id="inputEmail1"placeholder="Email" name="email">
+				    	<input type="email" class="form-control" id="inputEmail1" placeholder="Email" name="email">
 				  	</div>
 				  	<div class="col-12 col-sm-6">
 					    <label for="inputFecha">Fecha de nacimiento</label>
-				    	<input type="text" class="form-control" id="inputFecha"placeholder="AAAA/MM/DD" name="fecha">
+				    	<input type="text" class="form-control" id="inputFecha" placeholder="AAAA/MM/DD" name="fecha">
 				  	</div>
 				</div>
 				<div class="row">
 					<div class="col-12 col-sm-6">
 					    <label for="inputPassword">Contraseña</label>
-				    	<input type="password" class="form-control" id="inputPassword"placeholder="Elegí una contraseña" name="pass">
+				    	<input type="password" class="form-control" id="inputPassword" placeholder="Elegí una contraseña" name="pass">
 				  	</div>
 				  	<div class="col-12 col-sm-6">
 					    <label for="inputPassword2">Repetí tu contraseña</label>
-				    	<input type="password" class="form-control" id="inputPassword2"placeholder="Repetí tu contraseña" name="pass2">
+				    	<input type="password" class="form-control" id="inputPassword2" placeholder="Repetí tu contraseña" name="pass2">
 				  	</div>
 				</div><br>
 			  	<button type="submit" class="btn btn-outline-primary">Registrarse</button><br>
