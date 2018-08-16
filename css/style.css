@@ -36,20 +36,18 @@ a{
 	display: none;
 }
 .logo{
-	width: 13vw;
+	width: 30vw;
 }
 .nav-link{
 	color: #581845;
 }
 .container-fluid{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	padding-top: 50px;
 	padding-bottom: 50px;
-	height: 100vh;
 }
 .faq{
 	background-color: white;
@@ -65,10 +63,15 @@ div.linearLayoutV{
 	text-align: center;
 	color: #581845;
 }
-
 .loginImg,
 .registerImg{
 	display: none;
+}
+div.inputError input{
+	border: 1px solid red;
+}
+div.inputError span{
+	color: red;
 }
 
 @media(min-width: 576px){
@@ -84,12 +87,20 @@ div.linearLayoutV{
 	}
 	.container-fluid{
 		padding: 0;
+		flex-direction: row;
 	}
 	.contenedorPantallaCompleta{
 		height: 100vh;
 	}
 	.portada{
 		width: 50vw;
+	}
+	.logo{
+		width: 13vw;
+	}
+	.logoHome{
+		position: fixed;
+		top: 0;
 	}
 	.loginForm{
 		text-align: left;
