@@ -32,13 +32,12 @@
 
 	    //Validacion de fecha de nacimiento
 	    $fechaArray = explode('/', $fecha);
-	    var_dump($fechaArray);exit;
 	    if($fecha == ''){
 	    	$errores['fecha']  = 'El campo es obligatorio';
 	    }/*
-	    $fechaArray[0] = Año
-	    $fechaArray[1] = Mes
-	    $fechaArray[2] = Dia
+		    $fechaArray[0] = Año
+		    $fechaArray[1] = Mes
+		    $fechaArray[2] = Dia
 	    */
 	    elseif (!$fechaArray) {
 	    	$errores['fecha']  = 'El campo no cuenta con un formato valido';
@@ -46,9 +45,13 @@
 	    elseif (count($fechaArray) != 3) {
 	    	$errores['fecha']  = 'El campo no cuenta con un formato valido';
 	    }
-	    elseif (!is_numeric($fechaArray[0]) || !is_numeric($fechaArray[1]) || !is_numeric($fechaArray[2]) || ) {
+	    elseif (!is_numeric($fechaArray[0]) || !is_numeric($fechaArray[1]) || !is_numeric($fechaArray[2])) {
 	    	$errores['fecha']  = 'El campo no cuenta con un formato valido';
-	    }//TODO: FALTA TERMINAR
+	    }
+	    elseif ((intval(date("Y")) - $fechaArray[0]) < 15) {
+	    	$errores['fecha']  = 'No cumple requisito de edad necesaria';
+	    }
+	    //TODO: FALTA TERMINAR
 
 	    //Validacion de contraseñas
 	    if ($pass == '' || $pass2 == '') {
@@ -66,12 +69,23 @@
 	    return $errores;
 	}
 
+	//Traer usuario por email (o false)
+	function traerEmail($email){
+	    $usuarios = traerTodos();
+	    foreach ($usuarios as $usuario) {
+	        if ($usuario['email'] == $email) {
+	            return $usuario;
+	        }
+	    }
+	    return false;
+	}
+
 	//Funcion para guardar un usuario en la "Base de datos"
 	function guardarUsuario($data){
 	    $usuario = [
 	        'id' => traerUltimoID(),
 	        "name" => $data['name'],
-	        "name" => $data['lastname'],
+	        "lastname" => $data['lastname'],
 	        "email" => $data['email'],
 	        "fecha" => $data['fecha'],
 	        "pass" => password_hash($data['pass'], PASSWORD_DEFAULT),
