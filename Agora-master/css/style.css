@@ -1,0 +1,143 @@
+
+*{
+	box-sizing: border-box;
+}
+body{
+	background-color: #FFC300;
+}
+h1{
+	font-size: 7vw;
+	color: #581845;
+	margin: 0px;
+}
+h2{
+	color: #581845;
+	font-style: bold;
+}
+h3{
+	color: #581845;
+
+}
+p{
+	color: #581845;
+	text-align: justify;
+}
+label{
+	color: #581845;
+}
+a{
+	color: #FF5733;
+}
+.nav{
+	display:inline;
+	display: flex;
+}
+.portada{
+	display: none;
+}
+.logo{
+	width: 30vw;
+}
+.nav-link{
+	color: #581845;
+}
+.container-fluid{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-bottom: 50px;
+}
+.faq{
+	background-color: white;
+	margin: 10px auto;
+	padding: 15px;
+	width: 80%;
+}
+div.linearLayoutV{
+	display: flex;
+	flex-direction: column;
+}
+.titulo{
+	text-align: center;
+	color: #581845;
+}
+.loginImg,
+.registerImg{
+	display: none;
+}
+div.inputError input{
+	border: 1px solid red;
+}
+div.inputError span{
+	color: red;
+}
+
+@media(min-width: 576px){
+}
+
+@media(min-width: 768px){
+}
+
+@media(min-width: 992px){
+	header{
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	.container-fluid{
+		padding: 0;
+		flex-direction: row;
+	}
+	.contenedorPantallaCompleta{
+		height: 100vh;
+	}
+	.portada{
+		width: 50vw;
+	}
+	.logo{
+		width: 13vw;
+	}
+	.logoHome{
+		position: fixed;
+		top: 0;
+	}
+	.loginForm{
+		text-align: left;
+		justify-content: flex-start;
+	}
+	.loginForm h2{
+		text-align: left;
+	}
+	.loginImg{
+		display: block;
+		text-align: right;
+		justify-content: flex-end;
+		padding-right: 0;
+		height: 100%;
+	}
+	.loginImg img,
+	.registerImg img{
+		width: 40vw;
+		height: 100%;
+	}
+	.registerForm{
+		text-align: right;
+		justify-content: flex-end;
+	}
+	.registerForm h2{
+		text-align: right;
+	}
+	.registerImg{
+		display: block;
+		text-align: left;
+		justify-content: flex-start;
+		height: 100vh;
+		padding-left: 0;
+		overflow: hidden;
+	}
+}
+
+@media(min-width: 1200px){
+	
+}
