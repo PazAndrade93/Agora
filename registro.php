@@ -51,7 +51,12 @@
 	    elseif ((intval(date("Y")) - $fechaArray[0]) < 15) {
 	    	$errores['fecha']  = 'No cumple requisito de edad necesaria';
 	    }
-	    //TODO: FALTA TERMINAR
+	    elseif ($fechaArray[1] > 12) {
+	    	$errores['fecha']  = 'El campo no cuenta con un formato valido';
+	    }
+	    elseif ($fechaArray[2] > 31) {
+	    	$errores['fecha']  = 'El campo no cuenta con un formato valido';
+	    }
 
 	    //Validacion de contraseñas
 	    if ($pass == '' || $pass2 == '') {
@@ -92,7 +97,7 @@
 	        "src" => ''
 	    ];
 	    $usuarioJSON = json_encode($usuario);
-	    file_put_contents('usuarios.json', $usuarioJSON . PHP_EOL, FILE_APPEND);
+	    file_put_contents('/usuarios.json', $usuarioJSON . PHP_EOL, FILE_APPEND);
 	}
 
 	//Trae el proximo Id para la "Base de datos"
