@@ -97,8 +97,9 @@
 	        "src" => ''
 	    ];
 	    $usuarioJSON = json_encode($usuario);
-	    file_put_contents('/usuarios.json', $usuarioJSON . PHP_EOL, FILE_APPEND);
+	    file_put_contents('usuarios.json', $usuarioJSON . PHP_EOL, FILE_APPEND);
 	}
+
 
 	//Trae el proximo Id para la "Base de datos"
 	function traerUltimoID(){
@@ -185,7 +186,7 @@
 							<label for="inputLastname">Apellido</label>
 							<input type="text" class="form-control" id="inputLastname" placeholder="Apellido" name="lastname" value="<?=$lastname?>">
 							<span><?= isset($errores['lastname']) ? $errores['lastname'] : ''; ?></span>
-						</div>				    	
+						</div>
 				  	</div>
 				</div>
 				<div class="row">
@@ -224,6 +225,6 @@
 			  	<a href="login.php">¿Ya tenes una cuenta?</a>
 			</form>
 		</div>
-	</div>	
+	</div>
 </body>
 </html>
