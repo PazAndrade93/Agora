@@ -143,7 +143,7 @@
 
 		if (empty($errores)) {
 			guardarUsuario($_POST);
-			header('location:home.php');
+			header('location:perfil.php');
 		}
 	}
 ?>
