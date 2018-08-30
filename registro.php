@@ -97,6 +97,7 @@
 	        "src" => ''
 	    ];
 	    $usuarioJSON = json_encode($usuario);
+	    var_dump($usuarioJSON);
 	    file_put_contents('usuarios.json', $usuarioJSON . PHP_EOL, FILE_APPEND);
 	}
 
@@ -154,6 +155,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
 	<title>Registro - Agora</title>
 </head>
 <body>
