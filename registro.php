@@ -148,85 +148,69 @@
 		}
 	}
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
-	<title>Registro - Agora</title>
-</head>
-<body>
-	<div class="container-fluid contenedorPantallaCompleta">
-		<div class="logoHome">
-			<a class="navbar-brand" href="index.php">
-              <img src= "img/agora.png"  class="logo" alt="Brand">
-            </a>
-		</div>
-		<div class="registerImg col-lg-5">
-			<img src="img/registerMinimalistPic.png">
-		</div>
-		<div class="linearLayoutV loginForm col-12 col-lg-7">
-			<form method="POST">
-				<div class="row">
-					<div class="col-12">
-						<h2 class="titulo">Registro</h2><br>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-12 col-sm-6">
-						<div class="form-group <?= isset($errores['name']) ? 'inputError' : null ?>">
-							<label for="inputNombre">Nombre</label>
-							<input type="text" class="form-control" id="inputNombre" placeholder="Nombre" name="name" value="<?=$name?>">
-							<span><?= isset($errores['name']) ? $errores['name'] : ''; ?></span>
-						</div>
-				  	</div>
-				  	<div class="col-12 col-sm-6">
-						<div class="form-group <?= isset($errores['lastname']) ? 'inputError' : null ?>">
-							<label for="inputLastname">Apellido</label>
-							<input type="text" class="form-control" id="inputLastname" placeholder="Apellido" name="lastname" value="<?=$lastname?>">
-							<span><?= isset($errores['lastname']) ? $errores['lastname'] : ''; ?></span>
-						</div>
-				  	</div>
-				</div>
-				<div class="row">
-					<div class="col-12 col-sm-6">
-						<div class="form-group <?= isset($errores['email']) ? 'inputError' : null ?>">
-							<label for="inputEmail1">Email</label>
-							<input type="text" class="form-control" id="inputEmail1" placeholder="Email" name="email" value="<?=$email?>">
-							<span><?= isset($errores['email']) ? $errores['email'] : ''; ?></span>
-						</div>
-				  	</div>
-				  	<div class="col-12 col-sm-6">
-						<div class="form-group <?= isset($errores['fecha']) ? 'inputError' : null ?>">
-							<label for="inputFecha">Fecha de nacimiento</label>
-							<input type="text" class="form-control" id="inputFecha" placeholder="AAAA/MM/DD" name="fecha" value="<?=$fecha?>">
-							<span><?= isset($errores['fecha']) ? $errores['fecha'] : ''; ?></span>
-						</div>
-				  	</div>
-				</div>
-				<div class="row">
-					<div class="col-12 col-sm-6">
-						<div class="form-group <?= isset($errores['pass']) ? 'inputError' : null ?>">
-							<label for="inputPassword">Contraseña</label>
-							<input type="password" class="form-control" id="inputPassword" placeholder="Elegí una contraseña" name="pass" value="<?=$pass?>">
-							<span><?= isset($errores['pass']) ? $errores['pass'] : ''; ?></span>
-						</div>
-				  	</div>
-				  	<div class="col-12 col-sm-6">
-						<div class="form-group <?= isset($errores['pass2']) ? 'inputError' : null ?>">
-							<label for="inputPassword2">Repetí tu contraseña</label>
-							<input type="password" class="form-control" id="inputPassword2" placeholder="Repetí tu contraseña" name="pass2" value="<?=$pass2?>">
-							<span><?= isset($errores['pass2']) ? $errores['pass2'] : ''; ?></span>
-						</div>
-				  	</div>
-				</div><br>
-			  	<button type="submit" class="btn btn-outline-primary">Registrarse</button><br><br>
-			  	<a href="login.php">¿Ya tenes una cuenta?</a>
-			</form>
-		</div>
+<?php require_once("header.php");?>
+	<div class="registerImg col-lg-5">
+		<img src="img/registerMinimalistPic.png">
 	</div>
-</body>
-</html>
+	<div class="linearLayoutV loginForm col-12 col-lg-7">
+		<form method="POST">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="titulo">Registro</h2><br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-6">
+					<div class="form-group <?= isset($errores['name']) ? 'inputError' : null ?>">
+						<label for="inputNombre">Nombre</label>
+						<input type="text" class="form-control" id="inputNombre" placeholder="Nombre" name="name" value="<?=$name?>">
+						<span><?= isset($errores['name']) ? $errores['name'] : ''; ?></span>
+					</div>
+			  	</div>
+			  	<div class="col-12 col-sm-6">
+					<div class="form-group <?= isset($errores['lastname']) ? 'inputError' : null ?>">
+						<label for="inputLastname">Apellido</label>
+						<input type="text" class="form-control" id="inputLastname" placeholder="Apellido" name="lastname" value="<?=$lastname?>">
+						<span><?= isset($errores['lastname']) ? $errores['lastname'] : ''; ?></span>
+					</div>
+			  	</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-6">
+					<div class="form-group <?= isset($errores['email']) ? 'inputError' : null ?>">
+						<label for="inputEmail1">Email</label>
+						<input type="text" class="form-control" id="inputEmail1" placeholder="Email" name="email" value="<?=$email?>">
+						<span><?= isset($errores['email']) ? $errores['email'] : ''; ?></span>
+					</div>
+			  	</div>
+			  	<div class="col-12 col-sm-6">
+					<div class="form-group <?= isset($errores['fecha']) ? 'inputError' : null ?>">
+						<label for="inputFecha">Fecha de nacimiento</label>
+						<input type="text" class="form-control" id="inputFecha" placeholder="AAAA/MM/DD" name="fecha" value="<?=$fecha?>">
+						<span><?= isset($errores['fecha']) ? $errores['fecha'] : ''; ?></span>
+					</div>
+			  	</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-6">
+					<div class="form-group <?= isset($errores['pass']) ? 'inputError' : null ?>">
+						<label for="inputPassword">Contraseña</label>
+						<input type="password" class="form-control" id="inputPassword" placeholder="Elegí una contraseña" name="pass" value="<?=$pass?>">
+						<span><?= isset($errores['pass']) ? $errores['pass'] : ''; ?></span>
+					</div>
+			  	</div>
+			  	<div class="col-12 col-sm-6">
+					<div class="form-group <?= isset($errores['pass2']) ? 'inputError' : null ?>">
+						<label for="inputPassword2">Repetí tu contraseña</label>
+						<input type="password" class="form-control" id="inputPassword2" placeholder="Repetí tu contraseña" name="pass2" value="<?=$pass2?>">
+						<span><?= isset($errores['pass2']) ? $errores['pass2'] : ''; ?></span>
+					</div>
+			  	</div>
+			</div><br>
+		  	<button type="submit" class="btn btn-outline-primary col-sm-6 offset-sm-3">Registrarse</button><br>
+		  	<div class="col-sm-6 offset-sm-3 underButtonLink">
+		  		<a href="login.php">¿Ya tenes una cuenta?</a>
+		  	</div>
+		</form>
+	</div>
+<?php require_once("footer.php");?>

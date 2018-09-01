@@ -9,7 +9,7 @@
     <title>Agora, tu sitio de trabajo</title>
   </head>
   <body>
-  	<div class="container-fluid contenedorPantallaCompleta row">
+  	<div class="container-fluid contenedorPrincipal contenedorPantallaCompleta row">
       <header class="header col-12">
         <nav class="navbar navbar-default">
           <div class="navbar-header">
